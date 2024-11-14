@@ -1,0 +1,146 @@
+{
+  "editor.copyWithSyntaxHighlighting": false,
+  "editor.guides.bracketPairsHorizontal": true,
+  "editor.guides.highlightActiveBracketPair": true,
+  "editor.tabSize": 2,
+  "editor.unicodeHighlight.invisibleCharacters": false,
+  // 不要同时开启editor.formatOnSave和source.fixAll.eslint，这样会导致两次lint检查
+  "editor.formatOnSave": false,
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "never",
+    "source.fixAll.eslint": "explicit",
+    "source.organizeImports": "never"
+  },
+  "files.eol": "\n",
+  "files.insertFinalNewline": true,
+  "files.trimTrailingWhitespace": true,
+  "javascript.preferences.quoteStyle": "single",
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "typescript.preferences.quoteStyle": "single",
+  "typescript.updateImportsOnFileMove.enabled": "always",
+
+  // VScode 文件搜索排除区域
+  "search.exclude": {
+    "**/*.snap": true,
+    "**/*.svg": true,
+    "**/.git": true,
+    "**/.github": false,
+    "**/.nuxt": true,
+    "**/.umi": true,
+    "**/.output": true,
+    "**/.pnpm": true,
+    "**/.vscode": true,
+    "**/.yarn": true,
+    "**/assets": true,
+    "**/bower_components": true,
+    "**/dist/**": true,
+    "**/logs": true,
+    "**/node_modules": true,
+    "**/out/**": true,
+    "**/package-lock.json": true,
+    "**/pnpm-lock.yaml": true,
+    "**/public": true,
+    "**/temp": true,
+    "**/yarn.lock": true,
+    "**/CHANGELOG*": true,
+    "**/LICENSE*": true
+  },
+  // 隐藏一些碍眼的文件夹
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    "**/tmp": true,
+    "**/bower_components": true
+  },
+  // 排除掉一些不必要索引的大文件夹以减少内存和CPU消耗
+  "files.watcherExclude": {
+    "**/.git/objects/**": true,
+    "**/.git/subtree-cache/**": true,
+    "**/node_modules/**": true,
+    "**/tmp/**": true,
+    "**/bower_components/**": true,
+    "**/dist/**": true
+  },
+
+  "cSpell.allowCompoundWords": true,
+  "cSpell.language": "en,en-US",
+  "emmet.triggerExpansionOnTab": false,
+  // ESLint config: https://github.com/antfu/eslint-config
+  "eslint.codeAction.showDocumentation": {
+    "enable": true
+  },
+  "eslint.format.enable": false,
+  "eslint.options": {
+    "configFile": ".eslintrc",
+    "extensions": [".html", ".vue", ".css", ".scss", ".js", ".ts", ".jsx", ".tsx"]
+  },
+  "eslint.quiet": true,
+  // Silent the stylistic rules in you IDE, but still auto fix them
+  "eslint.rules.customizations": [
+    { "rule": "style/*", "severity": "off" },
+    { "rule": "format/*", "severity": "off" },
+    { "rule": "*-indent", "severity": "off" },
+    { "rule": "*-spacing", "severity": "off" },
+    { "rule": "*-spaces", "severity": "off" },
+    { "rule": "*-order", "severity": "off" },
+    { "rule": "*-dangle", "severity": "off" },
+    { "rule": "*-newline", "severity": "off" },
+    { "rule": "*quotes", "severity": "off" },
+    { "rule": "*semi", "severity": "off" }
+  ],
+  "eslint.run": "onSave",
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "vue",
+    "html",
+    "markdown",
+    "json",
+    "jsonc",
+    "yaml",
+    "toml"
+  ],
+  "prettier.printWidth": 200,
+  "prettier.semi": false,
+  "prettier.singleQuote": true,
+  "prettier.trailingComma": "es5",
+
+  // ========== 格式化关联配置 ==========
+  "[css]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[html]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[vue]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "Vue.volar"
+  },
+  "[javascript]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "[typescript]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "[typescriptreact]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
+}

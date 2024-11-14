@@ -1,0 +1,14 @@
+{
+  "recommendations": [
+    "Vue.volar",
+    "esbenp.prettier-vscode",
+    "antfu.unocss",
+    "antfu.iconify",
+    "dbaeumer.vscode-eslint",
+    "csstools.postcss",
+    "streetsidesoftware.code-spell-checker",
+    "EditorConfig.EditorConfig",
+    "lokalise.i18n-ally",
+    "Gruntfuggly.todo-tree"
+  ]
+}
