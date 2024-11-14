@@ -1,6 +1,6 @@
 {
-  "name": "wxt-vue-starter",
-  "description": "manifest.json description",
+  "name": "duolingo-helper",
+  "description": "多邻国助手",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -15,12 +15,14 @@
     "postinstall": "wxt prepare"
   },
   "dependencies": {
+    "@wxt-dev/storage": "^1.0.0",
     "vue": "^3.5.12"
   },
   "devDependencies": {
     "@types/chrome": "^0.0.280",
+    "@unocss/postcss": "^0.64.0",
+    "@unocss/reset": "^0.64.0",
     "@wxt-dev/module-vue": "^1.0.1",
-    "@wxt-dev/unocss": "^1.0.0",
     "typescript": "^5.6.3",
     "unocss": "^0.64.0",
     "vue-tsc": "^2.1.10",

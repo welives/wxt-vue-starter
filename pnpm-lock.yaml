@@ -5,6 +5,9 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  '@wxt-dev/storage':
+    specifier: ^1.0.0
+    version: 1.0.0
   vue:
     specifier: ^3.5.12
     version: 3.5.12(typescript@5.6.3)
@@ -13,12 +16,15 @@ devDependencies:
   '@types/chrome':
     specifier: ^0.0.280
     version: 0.0.280
+  '@unocss/postcss':
+    specifier: ^0.64.0
+    version: 0.64.0(postcss@8.4.49)
+  '@unocss/reset':
+    specifier: ^0.64.0
+    version: 0.64.0
   '@wxt-dev/module-vue':
     specifier: ^1.0.1
     version: 1.0.1(vite@5.4.11)(vue@3.5.12)(wxt@0.19.14)
-  '@wxt-dev/unocss':
-    specifier: ^1.0.0
-    version: 1.0.0(unocss@0.64.0)(wxt@0.19.14)
   typescript:
     specifier: ^5.6.3
     version: 5.6.3
@@ -1235,17 +1241,12 @@ packages:
       - vue
     dev: true
 
-  /@wxt-dev/unocss@1.0.0(unocss@0.64.0)(wxt@0.19.14):
-    resolution: {integrity: sha512-pxEs6sVoAgamk1aHxbETXqXUWES6ODi6NGnNHG7I1CQzgjtogiMtsA6K7hrsosX5qu8g6YFRNDjeLFMnb83k+w==}
-    peerDependencies:
-      unocss: '>=0.60.0'
-      wxt: '>=0.19.0'
+  /@wxt-dev/storage@1.0.0:
+    resolution: {integrity: sha512-Pr0nZUnA6ElAIq5yl+GdZfvhAI3/wXf7ZdwOHShI2VtDirfgo+tBFQZ123f86l5i81v7FfvrQi3WFSzojcRsJw==}
     dependencies:
-      defu: 6.1.4
-      fast-glob: 3.3.2
-      unocss: 0.64.0(postcss@8.4.49)(vite@5.4.11)(vue@3.5.12)
-      wxt: 0.19.14
-    dev: true
+      async-mutex: 0.5.0
+      dequal: 2.0.3
+    dev: false
 
   /acorn@8.14.0:
     resolution: {integrity: sha512-cl669nCJTZBsL97OF4kUQm5g5hC2uihk0NxY3WENAC0TYdILVkAyHymAntgxGkl7K+t0cXIrH5siy5S4XkFycA==}
@@ -1323,7 +1324,6 @@ packages:
     resolution: {integrity: sha512-1A94B18jkJ3DYq284ohPxoXbfTA5HsQ7/Mf4DEhcyLx3Bz27Rh59iScbB6EPiP+B+joue6YCxcMXSbFC1tZKwA==}
     dependencies:
       tslib: 2.8.1
-    dev: true
 
   /async@3.2.6:
     resolution: {integrity: sha512-htCUDlxyyCLMgaM3xXg0C0LW2xqfuQ6p05pCEIsXuyQ+a1koYKTuBMzRNwmybfLgvJDMd0r1LTn4+E0Ti6C2AA==}
@@ -1438,13 +1438,13 @@ packages:
       run-applescript: 7.0.0
     dev: true
 
-  /bundle-require@5.0.0(esbuild@0.21.5):
+  /bundle-require@5.0.0(esbuild@0.23.1):
     resolution: {integrity: sha512-GuziW3fSSmopcx4KRymQEJVbZUfqlCqcq7dvs6TYwKRZiegK/2buMxQTPs6MGlNv50wms1699qYO54R8XfRX4w==}
     engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
     peerDependencies:
       esbuild: '>=0.18'
     dependencies:
-      esbuild: 0.21.5
+      esbuild: 0.23.1
       load-tsconfig: 0.2.5
     dev: true
 
@@ -1859,7 +1859,6 @@ packages:
   /dequal@2.0.3:
     resolution: {integrity: sha512-0je+qPKHEMohvfRTCEo3CrPG6cAzAYgmzKyxRiYSSDkS6eGJdyVJm7WaYA5ECaAD9wLB2T4EEeymA5aFVcYXCA==}
     engines: {node: '>=6'}
-    dev: true
 
   /destr@2.0.3:
     resolution: {integrity: sha512-2N3BOUU4gYMpTP24s5rF5iP7BDr7uNTCs4ozw3kf/eKfvWSIu93GEBi5m427YoyJoeOzQ5smuu4nNAPGb8idSQ==}
@@ -2432,9 +2431,9 @@ packages:
   /importx@0.4.4:
     resolution: {integrity: sha512-Lo1pukzAREqrBnnHC+tj+lreMTAvyxtkKsMxLY8H15M/bvLl54p3YuoTI70Tz7Il0AsgSlD7Lrk/FaApRcBL7w==}
     dependencies:
-      bundle-require: 5.0.0(esbuild@0.21.5)
+      bundle-require: 5.0.0(esbuild@0.23.1)
       debug: 4.3.7
-      esbuild: 0.21.5
+      esbuild: 0.23.1
       jiti: 2.0.0-beta.3
       jiti-v1: /jiti@1.21.6
       pathe: 1.1.2
@@ -3873,7 +3872,6 @@ packages:
 
   /tslib@2.8.1:
     resolution: {integrity: sha512-oJFu94HQb+KVduSUQL7wnpmqnfmLsOA/nAh6b6EH0wCEoK0/mPeXU6c3wKDV83MkOuHPRHtSXKKU99IBazS/2w==}
-    dev: true
 
   /tsx@4.19.2:
     resolution: {integrity: sha512-pOUl6Vo2LUq/bSa8S5q7b91cgNSjctn9ugq/+Mvow99qW6x/UZYwzxy/3NmqoT66eHYfCVvFvACC58UBPFf28g==}

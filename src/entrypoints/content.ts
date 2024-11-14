@@ -1,6 +1,8 @@
+import '~/styles/globals.css'
+
 export default defineContentScript({
-  matches: ['*://*.google.com/*'],
-  main() {
-    console.log('Hello content.');
+  matches: ['<all_urls>'],
+  main(ctx) {
+    console.log('Hello content.')
   },
-});
+})
