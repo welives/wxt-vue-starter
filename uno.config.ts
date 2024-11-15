@@ -6,10 +6,20 @@ import {
   transformerDirectives,
   toEscapedSelector
 } from 'unocss'
+import presetAnimations from 'unocss-preset-animations'
+import { builtinColors, presetShadcn } from 'unocss-preset-shadcn'
 
 export default defineConfig({
   content: {
-    filesystem: ['**/*.{html,js,ts,jsx,tsx,vue,svelte,astro}']
+    filesystem: ['**/*.{html,js,ts,jsx,tsx,vue,svelte,astro}'],
+    pipeline: {
+      include: [
+        // the default
+        /\.(vue|svelte|[jt]sx|mdx?|astro|elm|php|phtml|html)($|\?)/,
+        // include js/ts files
+        '(components|src)/**/*.{js,ts}',
+      ],
+    },
   },
   presets: [
     presetUno({
@@ -22,6 +32,8 @@ export default defineConfig({
         'vertical-align': 'middle',
       },
     }),
+    presetAnimations(),
+    presetShadcn(builtinColors.map((c) => ({ color: c ?? 'zinc' })))
   ],
   transformers: [
     transformerDirectives(),

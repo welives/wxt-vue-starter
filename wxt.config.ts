@@ -1,5 +1,6 @@
 import { defineConfig } from 'wxt'
 import UnoCSS from 'unocss/vite'
+import { r } from './scripts/utils'
 
 // See https://wxt.dev/api/config.html
 export default defineConfig({
@@ -11,6 +12,12 @@ export default defineConfig({
   },
   vite: () => {
     return {
+      root: r('src'),
+      resolve: {
+        alias: {
+          '~/': `${r('src')}/`,
+        },
+      },
       plugins: [UnoCSS()]
     }
   },
