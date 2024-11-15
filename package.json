@@ -1,9 +1,24 @@
 {
-  "name": "duolingo-helper",
-  "description": "多邻国助手",
+  "name": "wxt-vue-starter",
+  "description": "A simple wxt starter using vue, unocss and shadcn",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.0.1",
   "type": "module",
+  "keywords": [
+    "vite",
+    "vue3",
+    "wxt",
+    "unocss",
+    "shadcn-vue"
+  ],
+  "author": {
+    "name": "welives",
+    "url": "https://github.com/welives"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:welives/wxt-vue-starter.git"
+  },
   "scripts": {
     "dev": "wxt",
     "dev:firefox": "wxt -b firefox",
@@ -24,10 +39,15 @@
     "vue": "^3.5.12"
   },
   "devDependencies": {
+    "@antfu/eslint-config": "^3.9.1",
     "@types/chrome": "^0.0.280",
+    "@unocss/eslint-plugin": "^0.64.0",
     "@unocss/postcss": "^0.64.0",
     "@unocss/reset": "^0.64.0",
     "@wxt-dev/module-vue": "^1.0.1",
+    "eslint": "^9.14.0",
+    "eslint-plugin-format": "^0.1.2",
+    "prettier": "^3.3.3",
     "typescript": "^5.6.3",
     "unocss": "^0.64.0",
     "unocss-preset-animations": "^1.1.0",

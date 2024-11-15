@@ -1,7 +1,10 @@
-# WXT + Vue 3
+## Overview
 
-This template should help get you started developing with Vue 3 in WXT.
+This is a simple wxt starter using the following stack:
 
-## Recommended IDE Setup
-
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+- Framework - [Vue](https://vuejs.org/)
+- Language - [TypeScript](https://www.typescriptlang.org)
+- Styling - [UnoCSS](https://unocss.dev/)
+- Components - [shadcn-vue](https://www.shadcn-vue.com/)
+- Linting - [ESLint](https://eslint.org)
+- Formatting - [Prettier](https://prettier.io)
