@@ -1,10 +1,12 @@
 {
+  "extends": "./.wxt/tsconfig.json",
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
       "~": ["./src"],
       "~/*": ["./src/*"]
-    }
-  },
-  "extends": "./.wxt/tsconfig.json"
+    },
+    "noImplicitThis": false,
+    "types": ["@types/node"]
+  }
 }

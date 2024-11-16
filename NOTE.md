@@ -135,14 +135,14 @@ import 'url:https://www.googletagmanager.com/gtag/js?id=G-XXXXXX';
 
 ```json
 {
+  "extends": "./.wxt/tsconfig.json",
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
       "~": ["./src"],
       "~/*": ["./src/*"]
     }
-  },
-  "extends": "./.wxt/tsconfig.json"
+  }
 }
 ```
 
