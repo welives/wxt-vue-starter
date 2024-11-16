@@ -10,6 +10,11 @@ export default defineConfig({
   manifest: {
     permissions: ['storage'],
   },
+  imports: {
+    eslintrc: {
+      enabled: 9,
+    },
+  },
   vite: () => {
     return {
       root: r('src'),
