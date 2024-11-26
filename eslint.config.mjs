@@ -1,3 +1,4 @@
+import antfu from '@antfu/eslint-config'
 import { FlatCompat } from '@eslint/eslintrc'
 import autoImports from './.wxt/eslint-auto-imports.mjs'
 
