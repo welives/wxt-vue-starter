@@ -1,6 +1,4 @@
 import { defineConfig } from 'wxt'
-import UnoCSS from 'unocss/vite'
-import { r } from './scripts/utils'
 
 // See https://wxt.dev/api/config.html
 export default defineConfig({
@@ -8,22 +6,11 @@ export default defineConfig({
   extensionApi: 'chrome',
   modules: ['@wxt-dev/module-vue'],
   manifest: {
-    permissions: ['storage'],
+    permissions: ['storage', 'scripting', 'activeTab'],
   },
   imports: {
     eslintrc: {
       enabled: 9,
     },
-  },
-  vite: () => {
-    return {
-      root: r('src'),
-      resolve: {
-        alias: {
-          '~/': `${r('src')}/`,
-        },
-      },
-      plugins: [UnoCSS()]
-    }
   },
 })
